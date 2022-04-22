@@ -1,0 +1,5 @@
+# Create a project
+django-admin projectstart project_name
+
+# Run the project on a server
+python manage.py runserver
