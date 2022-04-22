@@ -3,3 +3,6 @@ django-admin projectstart project_name
 
 # Run the project on a server
 python manage.py runserver
+
+# Run an app
+python manage.py startapp first_app
