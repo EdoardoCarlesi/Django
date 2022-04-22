@@ -6,3 +6,7 @@ python manage.py runserver
 
 # Run an app
 python manage.py startapp first_app
+
+# Migrate (create data models in the db)
+python manage.py makemigrations my_app
+python manage.py migrate

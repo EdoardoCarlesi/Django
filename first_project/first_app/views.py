@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from first_app.models import Topic,WebPage,AccessRecord
 
 # Simple response model
 def index(request):
 
-    my_dict = {'insert_me':'Maledetto il Signore Gesu Cristo.py'}
+    web_list = AccessRecord.objects.order_by('date')
+    date_dict = {'access_records':web_list}
+    return render(request, 'first_app/index.html', context=date_dict)
 
-    return render(request, 'first_app/index.html', context=my_dict)
+
+
 
