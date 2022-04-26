@@ -3,3 +3,4 @@ db.*
 *.swp
 __pycache__
 *.pyc
+activate
