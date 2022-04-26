@@ -18,6 +18,7 @@ from django.urls import path, re_path
 from app import views 
 
 urlpatterns = [
+    re_path(r'^$', views.index, name='index'),
     path('admin/', admin.site.urls),
-    re_path(r'^formpage/', views.form_name_view, name='form_name'), 
+    re_path('^formpage', views.form_name_view, name='form_page'), 
 ]

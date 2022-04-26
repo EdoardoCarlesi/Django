@@ -1,7 +1,7 @@
 from django import forms
 
 
-class FromName(forms.Form):
+class FormName(forms.Form):
 
     name = forms.CharField()
     email = forms.EmailField()
