@@ -7,14 +7,25 @@
 		<title>User registration page</title>
 	</head>
 	<body>
-		<div class+"container">
-		<h1>Sign up here</h1>
-		<form method="POST">
-			{{ form.as_p }}
-			{% csrf_token %}
-			<input type="submit" class="bthn btn-primary" value="Submit">
-		</form>
-		</div>
+		<h1>Users list</h1>
+		<table>
+		{% if users %}
+		
+		<ol>
+			{% for user in users %}
+			<li> User info</li>
+			<ul>
+				<li>Name: {{ user.first_name }} </li>
+				<li>Surname: {{ user.last_name }} </li>
+				<li>Email: {{ user.mail }} </li>
+			</ul>
+			{% endfor %}
+		</ol>
+			
+		{% else %}
+		<em>NO USERS FOUND</em>
+		{% endif %}
+		</table>
 
 	</body>
 </html>
