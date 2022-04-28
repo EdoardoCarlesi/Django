@@ -1,10 +1,8 @@
-<html>
-	<head>
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<meta charset="utf-8">
-		<title>Welcome to Index</title>
-	</head>
-	<body>
-		<h1>Index page</h1>
-	</body>
-</html>
+<!DOCTYPE html>
+{% extends "app/base.html" %}
+{% block body_block %}
+<h1> Welcome to index </h1>
+<h2> Main page for template inheritance </h2>
+{{ text|cut:"erto" }}<br>
+{{ number|add:"8" }}
+{% endblock %}
