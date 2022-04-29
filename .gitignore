@@ -1,6 +1,7 @@
 *.tmp
 db.*
 *.swp
+*.jpeg
 __pycache__
 *.pyc
 activate

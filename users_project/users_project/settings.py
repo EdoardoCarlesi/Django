@@ -132,11 +132,11 @@ USE_TZ = True
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = 'media/'
+LOGIN_URL = 'app/login/'
 
 STATICFILES_DIR = [STATIC_DIR, ]
 STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

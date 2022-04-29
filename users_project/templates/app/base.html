@@ -11,12 +11,20 @@
 					<li><a class='navbar-brand' href="{% url 'index' %}">DJANGO</a></li>
 					<li><a class='navbar-link' href="{% url 'admin:index' %}">Admin</a></li>
 					<li><a class='navbar-link' href="{% url 'app:register' %}">Register</a></li>
+
+					{% if user.is_authenticated %}
+					<li><a class='navbar-link' href="{% url 'logout' %}">LogOut</a></li>
+					{% else %}
+					<li><a class='navbar-link' href="{% url 'app:user_login' %}">LogIn</a></li>
+					{% endif %}
 				</ul>
 			</div>
 		</nav>
 
+	<div class='container'>
 	 {% block body_block %}
 	 {% endblock %}
+	</div>
 
 	</body>
 </html>
