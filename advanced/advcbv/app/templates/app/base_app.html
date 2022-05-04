@@ -3,14 +3,12 @@
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
 		<meta charset="utf-8">
-		<title>Base</title>
 	</head>
 	<body>
 		<nav class='navbar navbar-default navbar-static navbar-static-top'>
 			<ul class='navbar navbar-nav'>
-				<li><a class='navbar-brand' href='{% url app:list %}'>Schools</a></li>
-				<li><a class='navbar-link' href='{% url admin:index %}'>Admin</a></li>
-				<li><a class='navbar-link' href='{% url  %}'></a></li>
+				<a class='navbar-link' href='{% url 'app:list' %}'>Schools</a>
+				<a class='navbar-link' href='{% url 'admin:index' %}'>Admin</a>
 			</ul>
 		</nav>
 		<div class="container">
