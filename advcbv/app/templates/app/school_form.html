@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends "app/base_app.html" %}
+{% block body_block %}
+	<div class='jumbotron'>
+		<h1>
+			{% if not form.instantce.pk %}
+				Create School
+			{% else %}
+				Update School
+			{% endif %}
+		</h1>
+		<form method='post'>
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type='submit' class='btn btn-primary' value='Submit'>
+		</form>
+	</div>
+
+	<div class='container'>
+		<p><a href={% url 'app:update' pk=school.pk %}>Update</a></p>
+	</div>
+{% endblock %}

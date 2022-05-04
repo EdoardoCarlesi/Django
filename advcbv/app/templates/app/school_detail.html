@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 {% extends "app/base_app.html" %}
 {% block body_block %}
-<h1> Welcome the school detail </h1>
 
 <div class='jumbotron'>
-
 	<h1>Scool  details:</h1>
-	<p>Name: {{school.name}} </p>
-	<p>Principal: {{school.principal}} </p>
-	<p>Location: {{school.location}} </p>
+	<p>Name: {{school_detail.name}} </p>
+	<p>Principal: {{school_detail.principal}} </p>
+	<p>Location: {{school_detail.location}} </p>
 	<h3>Students</h3>
-
 	{% for student in school_detail.students.all %}
-		<p>{{student.name}} who is {{student.age}} years old </p>
+		<p> {{student.name}} who is {{student.age}} years old </p>
 	{% endfor %}
 </div>
 
